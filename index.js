@@ -7,7 +7,7 @@ var server = new hapi.Server({debug: {request: ['info', 'error']}});
 
 var pack = require('./package'),
     swaggerOptions = {
-        apiVersion: pack.version
+        apiVersion: 1
     };
 
 // Create server
