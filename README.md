@@ -32,7 +32,7 @@ Using the API
 
 Swagger documentation
 -------------
-Documentation of the API is available here: http://localhost:81/documentation Since the database has many records, the GET requests to /devices and /alerts are limited to 50 by default
+Documentation of the API is available here: [http://localhost:81/documentation](http://localhost:81/documentation) Since the database has many records, the GET requests to /devices and /alerts are limited to 50 by default
 
 TODO: Tests
 -----
@@ -46,13 +46,13 @@ The project was developed using Visual Studio 2015RC and [NodeJS Tools](https://
 
 Additional information:
 
-version: v8.6.1
-routing: built in
-routing validation: [Joi](https://github.com/hapijs/joi) Object schema description language and validator for JavaScript objects
-swagger: [hapi-swagger ](https://github.com/glennjones/hapi-swagger) A Swagger interface for hapi
-error handling: built in, [boom](https://github.com/hapijs/boom) Set of utilities for returning HTTP errors
-mysql connection: [node-mysql](https://github.com/felixge/node-mysql/) Node.js driver for mysql
-IDE + debugging: Visual studio + NodeJS Tools (NTVS supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally and remotely (Windows/MacOS/Linux), as well Azure Web Sites and Cloud Service)
+* version: v8.6.1
+* routing: built in
+* routing validation: [Joi](https://github.com/hapijs/joi) Object schema description language and validator for JavaScript objects
+* swagger: [hapi-swagger ](https://github.com/glennjones/hapi-swagger) A Swagger interface for hapi
+* error handling: built in, [boom](https://github.com/hapijs/boom) Set of utilities for returning HTTP errors
+* mysql connection: [node-mysql](https://github.com/felixge/node-mysql/) Node.js driver for mysql
+* IDE + debugging: Visual studio + NodeJS Tools (NTVS supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally and remotely (Windows/MacOS/Linux), as well Azure Web Sites and Cloud Service)
 
 Debugging the project
 -------------------
