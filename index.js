@@ -1,42 +1,41 @@
 'use strict';
 
-var Database = require('./database');
-var Hapi = require('hapi');
+var hapi = require('hapi');
+var routes = require('./src/routes');
+var constants = require('./src/config/constants.js');
+var server = new hapi.Server({debug: {request: ['info', 'error']}});
 
-var database = new Database();
-var server = new Hapi.Server({debug: {request: ['info', 'error']}});
-
-// Expose database
-if (process.env.NODE_ENV === 'test') {
-    server.database = database;
-}
+var pack = require('../package'),
+    swaggerOptions = {
+        apiVersion: pack.version
+    };
 
 // Create server
-server.connection({
-    host: 'localhost',
-    port: 8000
-});
+var host = constants.application['host'];
+var port = constants.application['port'];
+server.connection({ host: host, port: port });
 
-// Add routes
-var plugins = [
-    {
-        register: require('./routes/tasks.js'),
-        options: {
-            database: database
+// Add all the routes within the routes folder
+for (var route in routes) {
+   server.route(routes[route]);
+}
+
+// Register Swagger documentation
+server.register({
+        register: require('hapi-swagger'),
+        options: swaggerOptions
+    }, function (err) {
+        if (err) {
+            server.log(['error'], 'hapi-swagger load error: ' + err)
+        }else{
+            server.log(['start'], 'hapi-swagger interface loaded')
         }
-    }
-];
-
-server.register(plugins, function (err) {
-    if (err) { throw err; }
-
-    if (!module.parent) {
-        server.start(function(err) {
-            if (err) { throw err; }
-
-            server.log('info', 'Server running at: ' + server.info.uri);
-        });
-    }
-});
+    });
 
 module.exports = server;
+
+server.start(function(err) {
+    if (err) { throw err; }
+
+    console.log('Server running at: ' + server.info.uri);
+});

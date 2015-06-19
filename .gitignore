@@ -26,3 +26,9 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Visual studio project compiled files
+bin
+obj
+.ntvs_analysis.dat
+.vs
