@@ -53,6 +53,7 @@ Additional information:
 * error handling: built in, [boom](https://github.com/hapijs/boom) Set of utilities for returning HTTP errors
 * mysql connection: [node-mysql](https://github.com/felixge/node-mysql/) Node.js driver for mysql
 * IDE + debugging: Visual studio + NodeJS Tools (NTVS supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally and remotely (Windows/MacOS/Linux), as well Azure Web Sites and Cloud Service)
+* logging: [good](https://github.com/hapijs/good) - server and process monitoring plugin
 
 Debugging the project
 -------------------

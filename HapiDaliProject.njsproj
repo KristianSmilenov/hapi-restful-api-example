@@ -16,10 +16,13 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="LICENSE" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="index.js" />
     <Compile Include="src\config\constants.js" />
+    <Compile Include="src\config\log-options.js" />
     <Compile Include="src\controllers\alert.js" />
     <Compile Include="src\controllers\device.js" />
     <Compile Include="src\controllers\reply-helper.js" />
@@ -34,6 +37,7 @@
     <Compile Include="src\routes\alert.js" />
     <Compile Include="src\routes\device.js" />
     <Compile Include="src\routes\index.js" />
+    <Compile Include="src\util\log.js" />
     <Compile Include="src\util\mixins.js" />
     <Compile Include="src\util\pagination-links.js" />
     <Compile Include="src\util\walk-dir.js" />
@@ -41,6 +45,7 @@
     <Compile Include="test\routes\tasks.js" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="logs\" />
     <Folder Include="src" />
     <Folder Include="src\config" />
     <Folder Include="src\controllers" />

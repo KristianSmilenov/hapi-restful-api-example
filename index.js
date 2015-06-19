@@ -2,13 +2,11 @@
 
 var hapi = require('hapi');
 var routes = require('./src/routes');
-var constants = require('./src/config/constants.js');
-var server = new hapi.Server({debug: {request: ['info', 'error']}});
+var constants = require('./src/config/constants');
+var server = new hapi.Server({ debug: { request: ['info', 'error'] } });
+var logOptions = require('./src/config/log-options');
 
-var pack = require('./package'),
-    swaggerOptions = {
-        apiVersion: 1
-    };
+server.log(['error', 'database', 'read']);
 
 // Create server
 var host = constants.application['host'];
@@ -21,6 +19,10 @@ for (var route in routes) {
 }
 
 // Register Swagger documentation
+var pack = require('./package'),
+    swaggerOptions = {
+        apiVersion: pack.version
+    };
 server.register({
         register: require('hapi-swagger'),
         options: swaggerOptions
@@ -31,6 +33,18 @@ server.register({
             server.log(['start'], 'hapi-swagger interface loaded')
         }
     });
+
+// Register 'good' - server and process monitoring plugin
+server.register({
+    register: require('good'),
+    options: logOptions
+}, function (err) {
+    if (err) {
+        server.log(['error'], 'good monitoring load error: ' + err)
+    } else {
+        server.log(['start'], 'good monitoring loaded')
+    }
+});
 
 module.exports = server;
 
