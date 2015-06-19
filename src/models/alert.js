@@ -5,7 +5,7 @@ var Joi = require('joi');
 
 function AlertModel(){
 	this.schema = {
-		id: Joi.number().integer(),
+		id: Joi.number().description('the id for the alert item'),
 		severity: Joi.number().integer(),
 		closed: Joi.number().optional(),
 		origin: Joi.string().optional(),

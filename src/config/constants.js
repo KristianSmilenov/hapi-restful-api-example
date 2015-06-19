@@ -23,26 +23,6 @@ module.exports = function() {
 		}
 	};
 
-	// if (!obj.application['host']) {
-	// 	throw new Error('Missing constant application.host. ' +
-	// 		'Check your enviroment variables NODE_HOST.');
-	// } else if (!obj.application['port']) {
-	// 	throw new Error('Missing constant application.port. ' +
-	// 		'Check your enviroment variable NODE_PORT.');
-	// } else if (!obj.database['host']) {
-	// 	throw new Error('Missing constant database.host. ' +
-	// 		'Check your enviroment variables.');
-	// } else if (!obj.database['user']) {
-	// 	throw new Error('Missing constant database.user. ' +
-	// 		'Check your enviroment variables.');
-	// } else if (!obj.database['password']) {
-	// 	throw new Error('Missing constant database.password. ' +
-	// 		'Check your enviroment variables.');
-	// } else if (!obj.database['database']) {
-	// 	throw new Error('Missing constant database.database. ' +
-	// 		'Check your enviroment variables.');
-	// }
-
 	return obj;
 
 	function databaseConfig(){

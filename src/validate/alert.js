@@ -9,8 +9,8 @@ function AlertValidate(){};
 AlertValidate.prototype = (function(){
 
 	return {
-		findByID: {
-			path: (function path() {
+        findByID: {
+            params: (function params() {
 				var alertSchema = new models.Alert().schema;
 				return {
 					id : alertSchema.id.required()
@@ -30,7 +30,7 @@ AlertValidate.prototype = (function(){
 		update: (function update() {
 			var alertSchema = new models.Alert().schema;
 			return {
-				path: {
+                params: {
 					id : alertSchema.id.required()
 				},
 				payload: {
@@ -41,7 +41,7 @@ AlertValidate.prototype = (function(){
 			}
 		})(),
 		delete: {
-			path: (function path() {
+            params: (function params() {
 				var alertSchema = new models.Alert().schema;
 				return {
 					id : alertSchema.id.required()

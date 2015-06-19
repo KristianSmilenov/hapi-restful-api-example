@@ -32,31 +32,24 @@ AlertController.prototype = (function(){
 		insert: function insert(request, reply) {
 
 			var helper = new ReplyHelper(request, reply);
-			var params = request.params;
-			
+			var payload = request.payload;
+            debugger;
 			var insert = Q.denodeify(alertDAO.insert);
 			var findByID = Q.denodeify(alertDAO.findByID);
 
-			insert(params).then(function insert(data) {
+			insert(payload).then(function (data) {
 
 				var result = data;
 				if (result.exception) {
 					reply(Hapi.error.badRequest(result.exception));
 					done();
 				} 
-				params.alertId = result.insertId;
-				return findByID(params);
+                payload.alertId = result.insertId;
+                
+                reply(payload);
 
-			}).then(function (data) {
-
-				var location = helper.url + request.path + '/' + params.alertId;
-
-				reply(data[0])
-					.type('application/json')
-					.code(201)
-					.header('Location', location);
-
-			}).catch(function (err) {
+            })
+            .catch(function (err) {
 				reply(Hapi.error.badImplementation(err));
 			});
 		},
@@ -71,7 +64,7 @@ AlertController.prototype = (function(){
 			var update = Q.denodeify(alertDAO.update);
 			var findByID = Q.denodeify(alertDAO.findByID);
 
-			update(params).then(function update(data) {
+			update(params).then(function (data) {
 
 				var result = data;
 				if (result.exception) {

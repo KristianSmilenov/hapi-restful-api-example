@@ -25,7 +25,7 @@ DeviceDAO.prototype = (function(){
 			var values = [
 			];
 
-			var sql = "select id, name, name_masked, mgt_address from `deviceinfo`";
+			var sql = "select id, name, name_masked, mgt_address from `deviceinfo` LIMIT 50";
 
 			db.query({
 				sql : sql, 

@@ -5,7 +5,7 @@ var routes = require('./src/routes');
 var constants = require('./src/config/constants.js');
 var server = new hapi.Server({debug: {request: ['info', 'error']}});
 
-var pack = require('../package'),
+var pack = require('./package'),
     swaggerOptions = {
         apiVersion: pack.version
     };

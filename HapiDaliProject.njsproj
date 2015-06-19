@@ -18,7 +18,6 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Compile Include="database.js" />
     <Compile Include="index.js" />
     <Compile Include="src\config\constants.js" />
     <Compile Include="src\controllers\alert.js" />

@@ -26,7 +26,7 @@ AlertDAO.prototype = (function(){
 			var values = [
 			];
 
-			var sql = "SELECT id, severity, closed, origin, plugin_name FROM alerts";
+			var sql = "SELECT id, severity, closed, origin, plugin_name FROM alerts LIMIT 50";
 
 			db.query({
 				sql : sql, 
