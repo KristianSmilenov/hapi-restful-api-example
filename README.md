@@ -13,7 +13,7 @@ Install
 Database setup
 --------------
 
-* Download the 'net' database from NMS appliance and upload it locally to mysql server. (you can also use the backup scripts located [\\KRISPC\Shared\NetDB]
+* Download the 'net' database from NMS appliance and upload it locally to mysql server. (you can also use the backup scripts located `\\KRISPC\Shared\NetDB`
 * Set database configuration in /src/config/constants.js. By default main database is called `net` and the one for testing purpuses - `net_test`
 
 Run
