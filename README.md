@@ -13,7 +13,7 @@ Install
 Database setup
 --------------
 
-* Download the 'net' database from NMS appliance and upload it locally to mysql server. (you can also use the backup scripts located `\\KRISPC\Shared\NetDB`
+* Download the 'net' database from NMS appliance and upload it locally to mysql server. You can also use the backup scripts located `\\KRISPC\Shared\NetDB`
 * Set database configuration in /src/config/constants.js. By default main database is called `net` and the one for testing purpuses - `net_test`
 
 Run
@@ -36,7 +36,7 @@ Documentation of the API is available here: [http://localhost:81/documentation](
 
 Tests
 -----
-The tests are executed towards a testing database called net_test. To configure testing environtment (set test database as active) use the following command:
+The tests are executed towards a testing database called `net_test`. To configure testing environtment (set test database as active) use the following command:
 
 `export NODE_ENV=test`
 
@@ -62,6 +62,8 @@ Additional information:
 * testing: [lap](https://github.com/hapijs/lab) - lab is a simple test utility for node. Unlike other test utilities, lab uses domains instead of uncaught exception and other global manipulation. 
 
 Great learning materials about HapiJS can be found here: [Learn Hapi](https://github.com/nelsonic/learn-hapi)
+
+!IMPORTANT: Currently there is no build in or plugin available for content negotiation. The only available [hapi-negotiator](https://github.com/felipeleusin/hapi-negotiator) This project enhances content negotiation capabilities of Hapi. It's a wrapper around [Negotiator module](https://www.npmjs.com/package/negotiator).
 
 Debugging the project
 -------------------
