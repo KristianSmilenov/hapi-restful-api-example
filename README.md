@@ -13,7 +13,7 @@ Install
 Database setup
 --------------
 
-* Download the 'net' database from NMS appliance and upload it locally to mysql server. (you can also use the backup scripts located [here](\\KRISPC\Shared\NetDB))
+* Download the 'net' database from NMS appliance and upload it locally to mysql server. (you can also use the backup scripts located [\\KRISPC\Shared\NetDB]
 * Set database configuration in /src/config/constants.js. By default main database is called `net` and the one for testing purpuses - `net_test`
 
 Run
@@ -59,6 +59,9 @@ Additional information:
 * mysql connection: [node-mysql](https://github.com/felixge/node-mysql/) Node.js driver for mysql
 * IDE + debugging: Visual studio + NodeJS Tools (NTVS supports Editing, Intellisense, Profiling, npm, TypeScript, Debugging locally and remotely (Windows/MacOS/Linux), as well Azure Web Sites and Cloud Service)
 * logging: [good](https://github.com/hapijs/good) - server and process monitoring plugin
+* testing: [lap](https://github.com/hapijs/lab) - lab is a simple test utility for node. Unlike other test utilities, lab uses domains instead of uncaught exception and other global manipulation. 
+
+Great learning materials about HapiJS can be found here: [Learn Hapi](https://github.com/nelsonic/learn-hapi)
 
 Debugging the project
 -------------------

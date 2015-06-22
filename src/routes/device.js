@@ -1,6 +1,7 @@
 "use strict";
 
 var deviceController = require('../controllers/device');
+var deviceValidate = require('../validate/device');
 
 module.exports = function() {
 	return [
@@ -22,6 +23,7 @@ module.exports = function() {
                 description: 'Gets a single device by ID',
                 notes: 'Returns a single device item by its ID',
                 tags: ['api'],
+                validate: deviceValidate.findByID
 			}
 		}		
 	];

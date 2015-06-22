@@ -16,6 +16,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="src\validate\device.js" />
     <Compile Include="test\unit\alerts.js" />
     <Content Include=".gitignore" />
     <Content Include="LICENSE" />
@@ -41,8 +42,6 @@
     <Compile Include="src\util\pagination-links.js" />
     <Compile Include="src\util\walk-dir.js" />
     <Compile Include="src\validate\alert.js" />
-    <Compile Include="database.js" />
-    <Compile Include="test\routes\tasks.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="logs\" />
@@ -57,7 +56,6 @@
     <Folder Include="src\validate" />
     <Folder Include="test" />
     <Folder Include="test\unit\" />
-    <Folder Include="test\routes" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
