@@ -54,6 +54,7 @@ Additional information:
 * version: v8.6.1
 * routing: built in
 * routing validation: [Joi](https://github.com/hapijs/joi) Object schema description language and validator for JavaScript objects
+* cors: built in - CORS headers are disabled by default. To enable, set cors to true, or to an object with the following [options](http://hapijs.com/api)
 * swagger: [hapi-swagger ](https://github.com/glennjones/hapi-swagger) A Swagger interface for hapi
 * error handling: built in, [boom](https://github.com/hapijs/boom) Set of utilities for returning HTTP errors
 * mysql connection: [node-mysql](https://github.com/felixge/node-mysql/) Node.js driver for mysql

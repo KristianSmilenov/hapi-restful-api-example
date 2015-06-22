@@ -13,7 +13,13 @@ var logOptions = require('./src/config/log-options');
 // Create server
 var host = constants.application['host'];
 var port = constants.application['port'];
-server.connection({ host: host, port: port });
+server.connection({
+    host: host, 
+    port: port,
+    routes: {
+        cors: true
+    }
+});
 
 // Add all the routes within the routes folder
 for (var route in routes) {

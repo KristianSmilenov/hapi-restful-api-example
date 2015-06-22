@@ -18,6 +18,7 @@
   <ItemGroup>
     <Compile Include="src\validate\device.js" />
     <Compile Include="test\unit\alerts.js" />
+    <Compile Include="test\unit\devices.js" />
     <Content Include=".gitignore" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
