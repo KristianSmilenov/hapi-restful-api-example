@@ -11,7 +11,7 @@
     "example"
   ],
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/.bin/lab --assert should"
+    "test": "./node_modules/.bin/lab"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,8 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "lab": "^5.0.2",
+    "code": "^1.4.1",
+    "lab": "^5.10.0",
     "should": "^4.3.0"
   }
 }

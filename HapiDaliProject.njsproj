@@ -16,6 +16,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="test\unit\alerts.js" />
     <Content Include=".gitignore" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
@@ -28,7 +29,6 @@
     <Compile Include="src\controllers\reply-helper.js" />
     <Compile Include="src\dao\alert.js" />
     <Compile Include="src\dao\device.js" />
-    <Compile Include="src\dao\user.js" />
     <Compile Include="src\middleware\basic-auth.js" />
     <Compile Include="src\middleware\db.js" />
     <Compile Include="src\models\alert.js" />
@@ -37,11 +37,11 @@
     <Compile Include="src\routes\alert.js" />
     <Compile Include="src\routes\device.js" />
     <Compile Include="src\routes\index.js" />
-    <Compile Include="src\util\log.js" />
     <Compile Include="src\util\mixins.js" />
     <Compile Include="src\util\pagination-links.js" />
     <Compile Include="src\util\walk-dir.js" />
     <Compile Include="src\validate\alert.js" />
+    <Compile Include="database.js" />
     <Compile Include="test\routes\tasks.js" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +56,7 @@
     <Folder Include="src\util" />
     <Folder Include="src\validate" />
     <Folder Include="test" />
+    <Folder Include="test\unit\" />
     <Folder Include="test\routes" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />

@@ -3,10 +3,12 @@
 var hapi = require('hapi');
 var routes = require('./src/routes');
 var constants = require('./src/config/constants');
-var server = new hapi.Server({ debug: { request: ['info', 'error'] } });
+var server = new hapi.Server({
+    debug: {
+        request: ['info', 'error']
+    }
+});
 var logOptions = require('./src/config/log-options');
-
-server.log(['error', 'database', 'read']);
 
 // Create server
 var host = constants.application['host'];
@@ -48,8 +50,8 @@ server.register({
 
 module.exports = server;
 
-server.start(function(err) {
+server.start(function (err) {
     if (err) { throw err; }
-
+        
     console.log('Server running at: ' + server.info.uri);
 });

@@ -46,7 +46,7 @@ ReplyHelper.prototype.replyDelete = function replyDelete(err, data) {
 
 	if (err) return this.reply(Hapi.error.badImplementation(err));
 
-	this.reply().code(204);
+	this.reply().code(200);
 };
 
 module.exports = ReplyHelper;

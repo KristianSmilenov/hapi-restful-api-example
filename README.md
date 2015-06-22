@@ -13,8 +13,8 @@ Install
 Database setup
 --------------
 
-* Download the 'net' database from NMS appliance and upload it locally to mysql server. (I can provide an sql dump of the databse if necessary)
-* Set database configuration in /src/config/constants.js
+* Download the 'net' database from NMS appliance and upload it locally to mysql server. (you can also use the backup scripts located [here](\\KRISPC\Shared\NetDB))
+* Set database configuration in /src/config/constants.js. By default main database is called `net` and the one for testing purpuses - `net_test`
 
 Run
 ---
@@ -34,8 +34,13 @@ Swagger documentation
 -------------
 Documentation of the API is available here: [http://localhost:81/documentation](http://localhost:81/documentation) Since the database has many records, the GET requests to /devices and /alerts are limited to 50 by default
 
-TODO: Tests
+Tests
 -----
+The tests are executed towards a testing database called net_test. To configure testing environtment (set test database as active) use the following command:
+
+`export NODE_ENV=test`
+
+Execute the tests with the following command:
 
 `$ npm test`
 

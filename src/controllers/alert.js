@@ -33,7 +33,6 @@ AlertController.prototype = (function(){
 
 			var helper = new ReplyHelper(request, reply);
 			var payload = request.payload;
-            debugger;
 			var insert = Q.denodeify(alertDAO.insert);
 			var findByID = Q.denodeify(alertDAO.findByID);
 

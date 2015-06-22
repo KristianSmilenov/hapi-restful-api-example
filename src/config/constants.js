@@ -32,7 +32,13 @@ module.exports = function() {
 				'user' : 'root',
 				'password' : '',
 				'database' : 'net'
-			}
+			},
+            'test' : {
+                'host' : 'localhost',
+                'user' : 'root',
+                'password' : '',
+                'database' : 'net_test'
+            }
 		};
 	}
 
@@ -42,6 +48,11 @@ module.exports = function() {
 				'url' : 'http://localhost:81',
 				'host' : 'localhost',
 				'port' : '81'
+			},
+			'test' : {
+                'url' : 'http://localhost:81',
+                'host' : 'localhost',
+                'port' : '81'
 			}
 		};
 	}
